@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+    <h1>{{ movie.movie_name }}</h1>
+    <div class="row">
+        <div class="col-md-8">
+            <img src="{{ movie.movie_image.url }}" alt="" style="width: 600px; height: 500px;">
+        </div>
+        <div class="col-md-4">
+            <h5>Description: </h5>
+            <p>{{ movie.description }}</p>
+            <h6>Movie Category: </h6>
+            <p>{{ movie.movie_category }}</p>
+            <h6>Duration: </h6>
+            <p>{{ movie.movie_duration }}</p>
+            <h6>Country: </h6>
+            <p>{{ movie.movie_country }}</p>
+        </div>
+    </div>
+{% endblock %}
