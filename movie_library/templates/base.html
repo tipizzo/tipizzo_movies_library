@@ -1,14 +1,41 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<style>
+  footer {
+    padding-top: 20px;
+  }
+  a .navbar-brand {
+    color: antiquewhite;
+  }
+  .nav-link {
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  .nav-link:hover {
+    background-color:darkolivegreen;
+    color: black;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px 10px 15px 10px;
+  }
+  .container {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+</style>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="{% url 'movie_index' %}">Tipizzo Movie Library</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" href="{% url 'movie_index' %}" style="color:antiquewhite; font-family:Georgia, 'Times New Roman', Times, serif;">Tipizzo Movie Library 🎬</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon" style="color: white;"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="{% url 'movie_index' %}">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{% url 'movie_index' %}" style="color: white;">Home <i class="fa fa-home"></i><span class="sr-only">(current)</span></a>
         </li>  
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -23,6 +50,29 @@
 
     {% endblock %}
   </div>
+
+  <footer class="bg-dark text-center text-white">
+    <div class="container p-4 pb-0">
+  
+      <section class="mb-4">
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-facebook-f"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i class="fa fa-twitter"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-google"></i></a>
+  
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-instagram"></i></a>
+      </section>
+     
+    </div>
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">TMovieLibrary</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
