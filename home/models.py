@@ -7,7 +7,7 @@ class Category(models.Model):
 
 class Movie(models.Model):
     movie_name = models.CharField(max_length=100)
-    movie_category = models.ManyToManyField('Category', related_name='movies')
+    categories = models.ManyToManyField('Category', related_name='movies')
     movie_duration = models.CharField(max_length=100)
     movie_country = models.CharField(max_length=100)
     producer_name = models.CharField(max_length=100)

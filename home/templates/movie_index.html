@@ -10,10 +10,10 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ movie.movie_name }}</h5>
                     <small>
-                        {{ movie.created_on.date }} |&nbsp;Categories:&nbsp;
+                        Release: {{ movie.created_on.date }} | &nbsp;
                         {% for category in movie.categories.all %}
                         <a href="{% url 'movie_category' category.name %}">
-                            {{ category.name }}
+                            <b>{{ category.name }}</b>
                         </a>&nbsp;
                         {% endfor %}
                     </small>
