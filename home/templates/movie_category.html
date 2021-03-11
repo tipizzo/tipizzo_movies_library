@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class="col-md-8 offset-md-2">
+    <h1>{{ category | movie_name }}</h1>
+    <hr>
+    {% for movie in movies %}
+    <h2><a href="{% url 'movie_detail' movie.pk%}">{{ movie.movie_name }}</a></h2>
+    <small>
+        {{ movie.created_on.date }} |&nbsp;
+        Categories:&nbsp;
+        {% for category in movie.categories.all %}
+        <a href="{% url 'movie_category' category.name %}">
+            {{ category.name }}
+        </a>&nbsp;
+        {% endfor %}
+    </small>
+    <p>{{ movie.body | slice:":400" }}...</p>
+    {% endfor %}
+</div>
+{% endblock %}

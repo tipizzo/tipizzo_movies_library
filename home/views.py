@@ -14,3 +14,12 @@ def movie_detail(request, pk):
         'movie': movie
     }
     return render(request, "movie_detail.html", context)
+
+def movie_category(request, category):
+    movies = Movie.objects.filter(categories__name__contains=category
+    ).order_by('-created_on')
+    context = {
+        'category': category,
+        'movies': movies
+    }
+    return render(request, 'movie_category.html', context)
